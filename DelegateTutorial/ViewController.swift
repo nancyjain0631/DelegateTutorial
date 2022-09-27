@@ -32,11 +32,17 @@ class ViewController: UIViewController {
     }
 }
 extension ViewController: PersonDetailsDelegate {
-    func personDetails(name: String, city: String, state: String) {
-        nameLabel.text = name
-        cityLabel.text = city
-        stateLabel.text = state
+    func data(object: [String : String]) {
+        nameLabel.text = object["name"]
+        cityLabel.text = object["city"]
+        stateLabel.text = object["state"]
     }
+    
+//    func personDetails(name: String, city: String, state: String) {
+//        nameLabel.text = name
+//        cityLabel.text = city
+//        stateLabel.text = state
+//    }
     
     
 }

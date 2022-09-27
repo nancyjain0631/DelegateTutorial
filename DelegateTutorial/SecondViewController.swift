@@ -7,7 +7,10 @@
 
 import UIKit
 protocol PersonDetailsDelegate {
-    func personDetails(name: String, city: String, state: String)
+//    func personDetails(name: String, city: String, state: String)
+//    will reduce code
+    
+    func data(object: [String: String])
 }
 class SecondViewController: UIViewController {
 
@@ -30,7 +33,12 @@ class SecondViewController: UIViewController {
         } else if stateTextField.text == "" {
             showAlert(title: "Enter State", msg: "")
         } else {
-            self.delegate?.personDetails(name: nameTextField.text!, city: cityTextField.text!, state: stateTextField.text!)
+//            self.delegate?.personDetails(name: nameTextField.text!, city: cityTextField.text!, state: stateTextField.text!)
+            
+            let dic:[String: String] = ["name": nameTextField.text!,
+                                        "city": cityTextField.text!,
+                                        "state": stateTextField.text!]
+            self.delegate?.data(object: dic)
         }
         
     }

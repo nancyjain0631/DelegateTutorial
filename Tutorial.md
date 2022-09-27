@@ -9,4 +9,7 @@
     make extension and conform to the protocol, assign things
     
     IMP: also assign to self where we are using delegate
+    
+    
+    In delegate, we pass parameters as there were 3 params, what if there were 10 or 100 params? we can't pass them like that so we will use dictionary to story them and access values using key.
 
